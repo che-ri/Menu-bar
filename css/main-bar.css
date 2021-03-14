@@ -1,0 +1,101 @@
+.main-bar {
+  background: #1b1b1b;
+  color: white;
+}
+
+.main-bar:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.main-bar .logo {
+  float: left;
+  /* display: none; */
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+
+.main-bar ul {
+  position: relative;
+  float: right;
+  list-style: none;
+  margin-right: 40px;
+}
+
+.main-bar ul li {
+  float: left;
+  display: inline-block;
+  background: #1b1b1b;
+  margin: 0 5px;
+}
+
+.main-bar ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+
+.main-bar ul li a:hover {
+  color: cyan;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+}
+
+.main-bar ul ul li a:hover {
+  box-shadow: none;
+}
+
+.main-bar ul ul {
+  position: absolute;
+  opacity: 0;
+  top: 90px;
+  border-top: 3px solid cyan;
+  visibility: hidden;
+  transition: top 0.3s;
+  z-index: 1;
+}
+
+.main-bar ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-bar ul ul li {
+  position: relative;
+  margin: 0;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.main-bar ul ul li:hover > ul {
+  top: 60px;
+}
+
+.main-bar ul ul li a {
+  line-height: 50px;
+}
+
+.main-bar ul ul ul {
+  border-top: none;
+  z-index: 2;
+}
+
+.main-bar ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+
+.main-bar .fa-plus {
+  margin-left: 40px;
+  font-size: 15px;
+}
